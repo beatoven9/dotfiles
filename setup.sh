@@ -17,3 +17,9 @@ function makeLinks() {
     tmux source-file ~/.tmux.conf
     xmodmap ~/.Xmodmap;
 }
+
+read -rp "This may overwrite files. proceed? [y/n] " -n 1;
+echo "";
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    makeLinks
+fi;
