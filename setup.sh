@@ -8,11 +8,25 @@ function makeLinks() {
     ln -sfn ~/dotfiles/.Xmodmap ~/.Xmodmap 
     ln -sfn ~/dotfiles/.zsh_aliases ~/.zsh_aliases
 
+    if [ ! -e ~/.config/nvim ]; then
+        mkdir ~/.config/nvim
+    fi
     ln -sfn ~/dotfiles/.config/nvim/init.vim ~/.config/nvim/init.vim
     ln -sfn ~/dotfiles/.config/nvim/coc-settings.json ~/.config/nvim/coc-settings.json
+
+    if [ ! -e ~/.config/i3]; then
+        mkdir ~/.config/i3
+    fi
     ln -sfn ~/dotfiles/.config/i3/config ~/.config/i3/config
 
-    ln -sfn ~/dotfiles/my_theme.zsh-theme ~/.oh-my-zsh/custom/themes/my_theme.zsh-theme
+    if [ ! -e ~/.config/i3blocks ]; then
+        mkdir ~/.config/i3blocks
+    fi
+    ln -sfn ~/dotfiles/.config/i3blocks/config ~/.config/i3blocks/config
+
+    if [ ! -e ~/.oh-my-zsh ]; then
+        ln -sfn ~/dotfiles/my_theme.zsh-theme ~/.oh-my-zsh/custom/themes/my_theme.zsh-theme
+    fi
 
     xmodmap ~/.Xmodmap;
 }
