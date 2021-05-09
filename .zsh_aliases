@@ -4,8 +4,6 @@ alias dolphin="dolphin-emu"
 
 alias new_password="~/bin/Password_GUI/main.py"
 
-alias my_passwords="nvim ~/Documents/my_passwords.txt"
-
 alias open="xdg-open"
 
 alias ex="chmod +x"
