@@ -13,8 +13,13 @@ function makeLinks() {
     fi
     ln -sfn ~/dotfiles/.config/nvim/init.vim ~/.config/nvim/init.vim
     ln -sfn ~/dotfiles/.config/nvim/coc-settings.json ~/.config/nvim/coc-settings.json
+        
+    if [ ! -e ~/.config/alacritty ]; then
+        mkdir ~/.config/alacritty
+    fi
+    ln -sfn ~/dotfiles/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 
-    if [ ! -e ~/.config/i3]; then
+    if [ ! -e ~/.config/i3 ]; then
         mkdir ~/.config/i3
     fi
     ln -sfn ~/dotfiles/.config/i3/config ~/.config/i3/config
