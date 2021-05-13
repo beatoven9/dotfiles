@@ -23,11 +23,18 @@ font pango:monospace 8
 # they are included here as an example. Modify as you see fit.
 
 # disable window title bars and set borders
-for_window [class=".*"] border pixel 3
+for_window [class=".*"] border pixel 4
+
+#class                  border  backgr. text    indicator   child_border
+client.focused          #000000 000000  #ffffff #53e68f     #16a39c
+client.focused_inactive #333333 #5f676a #ffffff #117681     #0c455d
+client.unfocused        #333333 #222222 #888888 #292d2e     #0c455d
+client.urgent           #2f343a #900000 #ffffff #900000     #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000     #0c0c0c
 
 # set gaps
-gaps inner 10
-gaps outer 10
+gaps inner 5
+gaps outer 2
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
@@ -196,7 +203,15 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         colors {
-            background #000000
+            background #303030
+            #statusline #xxxxxx
+            #separator #xxxxxx
+            
+            #                       border      background  text
+            focused_workspace       #3e6e51     #689d6a     #303030
+            active_workspace        #3e6e51     #303030     #3e6e51
+            inactive_workspace      #3e6e51     #303030     #3e6e51
+            binding_mode            #412474     #8248e9     #ffffff
         }
         position top
         status_command i3blocks
