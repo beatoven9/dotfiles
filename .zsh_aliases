@@ -1,6 +1,6 @@
 alias ff="firefox"
 
-alias dolphin="dolphin-emu"
+#alias dolphin="dolphin-emu"
 
 alias new_password="~/bin/Password_GUI/main.py"
 
