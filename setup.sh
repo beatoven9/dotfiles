@@ -29,6 +29,11 @@ function makeLinks() {
     fi
     ln -sfn ~/dotfiles/.config/i3blocks/config ~/.config/i3blocks/config
 
+    if [ ! -e ~/.config/blocklets ]; then
+        mkdir ~/.config/blocklets
+    fi
+    ln -sfn ~/dotfiles/.config/blocklets/battery ~/.config/blocklets/battery
+
     if [ ! -e ~/.oh-my-zsh/custom/themes/ ]; then
 	    mkdir ~/.oh-my-zsh/custom/themes/
     fi
