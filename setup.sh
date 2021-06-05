@@ -29,9 +29,10 @@ function makeLinks() {
     fi
     ln -sfn ~/dotfiles/.config/i3blocks/config ~/.config/i3blocks/config
 
-    if [ ! -e ~/.oh-my-zsh ]; then
-        ln -sfn ~/dotfiles/my_theme.zsh-theme ~/.oh-my-zsh/custom/themes/my_theme.zsh-theme
+    if [ ! -e ~/.oh-my-zsh/custom/themes/ ]; then
+	mkdir ~/.oh-my-zsh/custom/themes/
     fi
+    ln -sfn ~/dotfiles/my_theme.zsh-theme ~/.oh-my-zsh/custom/themes/my_theme.zsh-theme
 
     xmodmap ~/.Xmodmap;
 }
