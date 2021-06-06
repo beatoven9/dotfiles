@@ -115,13 +115,14 @@ interval=10
 command=sh ~/.config/blocklets/battery
 #command=sh $SCRIPT_DIR/battery
 interval=5
+separator=true
 color=#689d6a
 
 # Date Time
 #
 [time]
 label=  
-command=date  '+%m-%d-%Y %H:%M:%S'
+command=date  '+%m-%d-%Y %H:%M:%S '
 interval=1
 color=#689d6a
 
