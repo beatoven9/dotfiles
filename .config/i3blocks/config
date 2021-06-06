@@ -25,11 +25,13 @@
 # The top properties below are applied to every block, but can be overridden.
 # Each block command defaults to the script name to avoid boilerplate.
 # Change $SCRIPT_DIR to the location of your scripts!
-SCRIPT_DIR=~/i3blocks_scripts
+#TEXT_COLOR=#16a39c
+#TEXT_COLOR=#16a39c
 
 command=$SCRIPT_DIR/$BLOCK_NAME
-separator_block_width=15
+separator_block_width=35
 markup=none
+color=#16a39c
 
 # Volume indicator
 #
@@ -48,14 +50,14 @@ signal=10
 #
 # The type defaults to "mem" if the instance is not specified.
 [memory]
-label=MEM
-separator=false
+command=sh ~/dotfiles/.config/blocklets/memory
+label=MEM 
 interval=30
 
 [memory]
 label=SWAP
 instance=swap
-separator=false
+separator=true
 interval=30
 
 # Disk usage
@@ -111,21 +113,19 @@ interval=10
 #label=⚡
 #interval=30
 
-[battery]
-command=sh ~/.config/blocklets/battery
-#command=sh $SCRIPT_DIR/battery
-interval=5
-separator=true
-color=#689d6a
 
 # Date Time
 #
 [time]
 label=  
-command=date  '+%m-%d-%Y %H:%M:%S '
+command=date  '+%m-%d-%Y %H:%M:%S'
 interval=1
-color=#689d6a
 
+[battery]
+#command=sh ~/.config/blocklets/battery
+command=sh $SCRIPT_DIR/battery
+interval=5
+separator=true
 # Generic media player support
 #
 # This displays "ARTIST - SONG" if a music is playing.
