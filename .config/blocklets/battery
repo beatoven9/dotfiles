@@ -17,9 +17,9 @@ case $((
  $PERCENT > 40 && $PERCENT <= 60 ? 3 :
  $PERCENT > 60 && $PERCENT <= 80 ? 4 : 5)) in
 #
-       (1) echo  $CHARGING_ICON "" $PERCENT% ;;
-       (2) echo  $CHARGING_ICON "" $PERCENT% ;;
-       (3) echo  $CHARGING_ICON "" $PERCENT% ;;
-       (4) echo  $CHARGING_ICON "" $PERCENT% ;;
-       (5) echo  $CHARGING_ICON "" $PERCENT% ;;
+       (1) echo  $CHARGING_ICON "" $PERCENT%  " " ;;
+       (2) echo  $CHARGING_ICON "" $PERCENT%  " " ;;
+       (3) echo  $CHARGING_ICON "" $PERCENT%  " " ;;
+       (4) echo  $CHARGING_ICON "" $PERCENT%  " " ;;
+       (5) echo  $CHARGING_ICON "" $PERCENT%  " " ;;
 esac
