@@ -250,3 +250,7 @@ input 9610:30:HAILUCK_CO.,LTD_USB_KEYBOARD {
     xkb_options caps:escape
 
 }
+
+input 1452:594:Apple_Inc._Apple_Internal_Keyboard_/_Trackpad {
+    xkb_options caps:escape
+}
