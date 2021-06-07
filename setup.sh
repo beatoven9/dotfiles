@@ -33,11 +33,11 @@ function makeLinks() {
         mkdir ~/.config/blocklets
     fi
     ln -sfn ~/dotfiles/.config/blocklets/battery ~/.config/blocklets/battery
-
-    if [ ! -e ~/.config/blocklets ]; then
-        mkdir ~/.config/blocklets
-    fi
     ln -sfn ~/dotfiles/.config/blocklets/memory ~/.config/blocklets/memory
+    ln -sfn ~/dotfiles/.config/blocklets/disk ~/.config/blocklets/disk
+    ln -sfn ~/dotfiles/.config/blocklets/getuser ~/.config/blocklets/getuser
+
+
 
     if [ ! -e ~/.oh-my-zsh/custom/themes/ ]; then
 	    mkdir ~/.oh-my-zsh/custom/themes/
