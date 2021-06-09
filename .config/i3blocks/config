@@ -25,54 +25,13 @@
 # The top properties below are applied to every block, but can be overridden.
 # Each block command defaults to the script name to avoid boilerplate.
 # Change $SCRIPT_DIR to the location of your scripts!
-#TEXT_COLOR=#16a39c
-#TEXT_COLOR=#16a39c
 
 command=$SCRIPT_DIR/$BLOCK_NAME
-separator_block_width=35
+separator_block_width=20
 separator=true
 markup=none
 color=#16a39c
 
-# Volume indicator
-#
-# The first parameter sets the step (and units to display)
-# The second parameter overrides the mixer selection
-# See the script for details.
-
-[volume]
-label=♪
-label=VOL
-interval=once
-signal=10
-#STEP=5%
-
-# Memory usage
-#
-# The type defaults to "mem" if the instance is not specified.
-[memory]
-label= 
-command=sh ~/dotfiles/.config/blocklets/memory
-#label=MEM 
-interval=30
-
-[memory]
-label=SWAP
-instance=swap
-interval=30
-
-# Disk usage
-#
-# The directory defaults to $HOME if the instance is not specified.
-# The script may be called with a optional argument to set the alert
-# (defaults to 10 for 10%).
-[disk]
-label= 
-command=sh ~/dotfiles/.config/blocklets/disk
-#
-#
-#DIR=/mnt/data
-interval=30
 
 # Network interface monitoring
 #
@@ -94,21 +53,45 @@ separator=false
 #INTERFACE=eth0
 interval=5
 
-# CPU usage
-#
-# The script may be called with -w and -c switches to specify thresholds,
-# see the script for details.
+
+###CPU usage
 [cpu_usage]
-label=CPU
-interval=10
+command=~/dotfiles/.config/blocklets/cpu_usage/cpu_usage
+markup=pango
+interval=persist
 min_width=CPU 100.00%
-#separator=false
+REFRESH_TIME=2
+LABEL=CPU 
+WARN_PERCENT=50
+CRIT_PERCENT=80
+DECIMALS=2
 
-[load_average]
-label=LOAD
+# Memory usage
+#
+# The type defaults to "mem" if the instance is not specified.
+[memory]
+label= 
+command=sh ~/dotfiles/.config/blocklets/memory
+#label=MEM 
 interval=10
 
+[memory]
+label=SWAP
+instance=swap
+interval=30
 
+# Disk usage
+#
+# The directory defaults to $HOME if the instance is not specified.
+# The script may be called with a optional argument to set the alert
+# (defaults to 10 for 10%).
+[disk]
+label= 
+command=sh ~/dotfiles/.config/blocklets/disk
+#
+#
+#DIR=/mnt/data
+interval=30
 
 # Date Time
 [date]
@@ -128,23 +111,24 @@ interval=1
 command=sh $SCRIPT_DIR/battery
 interval=5
 
-[displayuser]
+# Volume indicator
+#
+# The first parameter sets the step (and units to display)
+# The second parameter overrides the mixer selection
+# See the script for details.
+
+[volume]
+label=VOL 
+command=sh ~/dotfiles/.config/blocklets/volume
+interval=once
+signal=10
+#STEP=5%
+
+
+[display_user]
+label=  
 command=sh $SCRIPT_DIR/getuser
 interval=once
-# Generic media player support
-#
-# This displays "ARTIST - SONG" if a music is playing.
-# Supported players are: spotify, vlc, audacious, xmms2, mplayer, and others.
-#[mediaplayer]
-#instance=spotify
-#interval=5
-#signal=10
-
-# OpenVPN support
-#
-# Support multiple VPN, with colors.
-#[openvpn]
-#interval=20
 
 # Temperature
 #
@@ -155,20 +139,3 @@ interval=once
 #label=TEMP
 #interval=10
 
-# Key indicators
-#
-# Add the following bindings to i3 config file:
-#
-# bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
-# bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
-#[keyindicator]
-#KEY=CAPS
-#markup=pango
-#interval=once
-#signal=11
-
-#[keyindicator]
-#KEY=NUM
-#markup=pango
-#interval=once
-#signal=11
