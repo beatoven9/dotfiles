@@ -8,6 +8,9 @@ Plug 'preservim/nerdtree'
 Plug 'habamax/vim-godot'
 Plug 'morhetz/gruvbox'
 
+"Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+
 call plug#end()
 
 let g:coc_global_extensions = ['coc-python', 'coc-jedi', 'coc-clangd', 'coc-pairs', 'coc-rust-analyzer', 'coc-html', 'coc-htmlhint', 'coc-html-css-support', 'coc-sh', 'coc-json', 'coc-tsserver']

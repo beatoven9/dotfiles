@@ -11,8 +11,15 @@ function makeLinks() {
     if [ ! -e ~/.config/nvim ]; then
         mkdir ~/.config/nvim
     fi
+    if [ ! -e ~/.config/nvim/ftplugin ]; then
+        mkdir ~/.config/nvim/ftplugin
+    fi
+
     ln -sfn ~/dotfiles/.config/nvim/init.vim ~/.config/nvim/init.vim
     ln -sfn ~/dotfiles/.config/nvim/coc-settings.json ~/.config/nvim/coc-settings.json
+    ln -sfn ~/dotfiles/.config/nvim/ftplugin/javascript.vim ~/.config/nvim/ftplugin/javascript.vim
+    ln -sfn ~/dotfiles/.config/nvim/ftplugin/html.vim ~/.config/nvim/ftplugin/html.vim
+    ln -sfn ~/dotfiles/.config/nvim/ftplugin/css.vim ~/.config/nvim/ftplugin/css.vim
         
     if [ ! -e ~/.config/alacritty ]; then
         mkdir ~/.config/alacritty
