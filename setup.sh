@@ -20,7 +20,7 @@ function makeFolders(){
         mkdir ~/.config/alacritty
     fi
 
-    if [ "$this_user" != "laon-surface" ]; then
+    if [ "$this_user" == "laon-pc" ] || ["$this_user" == "laon-pbp"]; then
 
 	    if [ ! -e ~/.config/i3 ]; then
 		mkdir ~/.config/i3
@@ -56,15 +56,15 @@ function makeLinks() {
 
 
 
-    if [ "$this_user" != "laon-surface" ]; then
+    if [ "$this_user" == "laon-pc" ] || ["$this_user" == "laon-pbp"]; then
 
 	    ln -sfn ~/dotfiles/.Xmodmap ~/.Xmodmap 
 	    ln -sfn ~/dotfiles/.config/i3/config ~/.config/i3/config
 	    ln -sfn ~/dotfiles/.config/i3blocks/config ~/.config/i3blocks/config
-	    ln -sfn ~/dotfiles/.config/blocklets/battery ~/.config/blocklets/battery
 	    ln -sfn ~/dotfiles/.config/blocklets/memory ~/.config/blocklets/memory
 	    ln -sfn ~/dotfiles/.config/blocklets/disk ~/.config/blocklets/disk
 	    ln -sfn ~/dotfiles/.config/blocklets/getuser ~/.config/blocklets/getuser
+	    ln -sfn ~/dotfiles/.config/blocklets/battery ~/.config/blocklets/battery
 	    xmodmap ~/.Xmodmap;
     fi
 }
