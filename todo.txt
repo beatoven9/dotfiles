@@ -1,0 +1,1 @@
+You don't need to add symlinks to the scripts folder but you should at least add the scripts folder to your path
