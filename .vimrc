@@ -120,8 +120,15 @@ set autoindent
 " ColorScheme
 "colorscheme gruvbox
 colorscheme iceberg
+"colorscheme nord
+"colorscheme dogrun
+
 "let g:oceanic_material_transparent_background=1
 "colorscheme oceanic_material
+"
+"Transparent background
+autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
+"autocmd vimenter * hi NonText guibg=NONE ctermbg=NONE
 
 " CustomKeyMappings
 map <F4> :nohl<CR>
