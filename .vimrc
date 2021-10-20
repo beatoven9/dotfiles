@@ -139,9 +139,20 @@ autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
 "
 """"""""""""""""""AirLine settings""""""""""""""""""""""""
 """"""""""""""""""AirLine settings""""""""""""""""""""""""
-let g:airline_theme='cool'
+
+"let g:airline_theme='behelit'
+"let g:airline_theme='understated'
+"let g:airline_theme='supernova'
+let g:airline_theme='papercolor'
+"let g:airline_theme='owo'
+"let g:airline_theme='molokai'
+
+"let g:airline_theme='soda'
+"let g:airline_theme='violet'
+
 
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 
