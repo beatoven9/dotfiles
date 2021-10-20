@@ -7,6 +7,11 @@ Plug 'preservim/nerdtree'
 
 Plug 'habamax/vim-godot'
 Plug 'morhetz/gruvbox'
+Plug 'glepnir/oceanic-material'
+Plug 'wadackel/vim-dogrun'
+Plug 'https://github.com/cocopon/iceberg.vim.git'
+Plug 'arcticicestudio/nord-vim'
+
 
 "Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -15,7 +20,7 @@ Plug 'alvan/vim-closetag'
 
 call plug#end()
 
-let g:coc_global_extensions = ['coc-python', 'coc-jedi', 'coc-clangd', 'coc-pairs', 'coc-rust-analyzer', 'coc-html', 'coc-htmlhint', 'coc-html-css-support', 'coc-sh', 'coc-json', 'coc-tsserver']
+let g:coc_global_extensions = ['coc-python', 'coc-jedi', 'coc-clangd', 'coc-pairs', 'coc-rust-analyzer', 'coc-html', 'coc-htmlhint', 'coc-html-css-support', 'coc-sh', 'coc-json', 'coc-tsserver', 'coc-flutter']
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -113,9 +118,10 @@ set expandtab
 set autoindent
 
 " ColorScheme
-colorscheme gruvbox
-
-set background=dark
+"colorscheme gruvbox
+colorscheme iceberg
+"let g:oceanic_material_transparent_background=1
+"colorscheme oceanic_material
 
 " CustomKeyMappings
 map <F4> :nohl<CR>
