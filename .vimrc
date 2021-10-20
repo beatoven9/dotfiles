@@ -4,6 +4,12 @@ call plug#begin('~/.config/nvim/data')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+"Plug 'kyazdani42/nvim-web-devicons'
+"Plug 'kyazdani42/nvim-tree.lua'
+"Plug 'romgrk/barbar.nvim'
 
 Plug 'habamax/vim-godot'
 Plug 'morhetz/gruvbox'
@@ -129,7 +135,18 @@ colorscheme iceberg
 "Transparent background
 autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
 "autocmd vimenter * hi NonText guibg=NONE ctermbg=NONE
+"
+"
+""""""""""""""""""AirLine settings""""""""""""""""""""""""
+""""""""""""""""""AirLine settings""""""""""""""""""""""""
+let g:airline_theme='cool'
 
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
+""""""""""""""""""AirLine settings""""""""""""""""""""""""
+""""""""""""""""""AirLine settings""""""""""""""""""""""""
 " CustomKeyMappings
 map <F4> :nohl<CR>
 
