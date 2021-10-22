@@ -169,6 +169,7 @@ nnoremap <silent>    <C-c> :bd<CR>
 " Next/previous buffer
 nnoremap <C-k> :bnext<CR>
 nnoremap <C-j> :bprevious<CR>        
+nnoremap <C-p> :bd<CR>
 
 "NERDTree
 nnoremap <C-n> :NERDTree<CR>
