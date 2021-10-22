@@ -158,10 +158,19 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 
 """"""""""""""""""AirLine settings""""""""""""""""""""""""
 """"""""""""""""""AirLine settings""""""""""""""""""""""""
-" CustomKeyMappings
+
+""""""""""""""""" CustomKeyMappings""""""""""""""""""""""
+" Clear Highlighting
 map <F4> :nohl<CR>
 
+""""""""""""""Buffer nav""""""""""""""""""""""
+" Close buffer
+nnoremap <silent>    <C-c> :bd<CR>
+" Next/previous buffer
+nnoremap <C-k> :bnext<CR>
+nnoremap <C-j> :bprevious<CR>        
 
+"NERDTree
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
