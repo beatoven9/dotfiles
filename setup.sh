@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -e
-this_user=$(uname -n)
+this_user="$(uname -n)"
 
 function makeFolders(){
     if [ ! -e ~/.config/nvim ]; then
@@ -20,7 +20,7 @@ function makeFolders(){
         mkdir ~/.config/alacritty
     fi
 
-    if [ "$this_user" == "laon-pc" ] || ["$this_user" == "laon-pbp"]; then
+    if [ $this_user=="laon-pc" ] || [$this_user=="laon-pbp"]; then
 
 	    if [ ! -e ~/.config/i3 ]; then
 		mkdir ~/.config/i3
@@ -39,24 +39,19 @@ function makeLinks() {
     ln -sfn ~/dotfiles/.vimrc ~/.vimrc
     ln -sfn ~/dotfiles/.zsh_aliases ~/.zsh_aliases
 
-
     ln -sfn ~/dotfiles/.config/nvim/init.vim ~/.config/nvim/init.vim
     ln -sfn ~/dotfiles/.config/nvim/coc-settings.json ~/.config/nvim/coc-settings.json
-    ln -sfn ~/dotfiles/.config/nvim/ftplugin/javascript.vim ~/.config/nvim/ftplugin/javascript.vim
-    ln -sfn ~/dotfiles/.config/nvim/ftplugin/html.vim ~/.config/nvim/ftplugin/html.vim
-    ln -sfn ~/dotfiles/.config/nvim/ftplugin/css.vim ~/.config/nvim/ftplugin/css.vim
+    ln -sf ~/dotfiles/.config/nvim/ftplugin/* ~/.config/nvim/ftplugin/
         
     ln -sfn ~/dotfiles/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 
-
-
-
     ln -sfn ~/dotfiles/my_theme.zsh-theme ~/.oh-my-zsh/custom/themes/my_theme.zsh-theme
 
+    ln -sf ~/dotfiles/scripts/* ~/scripts/
 
 
 
-    if [ "$this_user" == "laon-pc" ] || ["$this_user" == "laon-pbp"]; then
+    if [ $this_user=="laon-pc" ] || [$this_user=="laon-pbp"]; then
 
 	    ln -sfn ~/dotfiles/.Xmodmap ~/.Xmodmap 
 	    ln -sfn ~/dotfiles/.config/i3/config ~/.config/i3/config
