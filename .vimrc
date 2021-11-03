@@ -6,6 +6,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 "Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
+"Plug 'powerline/powerline'
 
 "Plug 'kyazdani42/nvim-web-devicons'
 "Plug 'kyazdani42/nvim-tree.lua'
@@ -157,8 +158,16 @@ autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
 "let g:airline#extensions#tabline#left_sep = ' '
 "let g:airline#extensions#tabline#left_alt_sep = '|'
 
+
 """"""""""""""""""AirLine settings""""""""""""""""""""""""
 """"""""""""""""""AirLine settings""""""""""""""""""""""""
+
+""""""""""""""""""Powerline""""""""""""""""""""""""
+""""""""""""""""""Powerline""""""""""""""""""""""""
+let g:powerline_pycmd="py3"
+
+""""""""""""""""""Powerline""""""""""""""""""""""""
+""""""""""""""""""Powerline""""""""""""""""""""""""
 
 """"""""""""""""" CustomKeyMappings""""""""""""""""""""""
 " Clear Highlighting
