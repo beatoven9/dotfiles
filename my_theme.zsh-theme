@@ -1,5 +1,5 @@
 #PROMPT="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
-PROMPT='%(?:%F{cyan}%c%f:%F{red}%c%f)'
+PROMPT=' %(?:%F{cyan}%c%f:%F{red}%c%f)'
 
 PROMPT+=' $(git_prompt_info)%B%F{magenta}>%f%F{green}>%f%F{cyan}>%f%b%{$reset_color%} '
 
