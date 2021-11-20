@@ -53,18 +53,40 @@ separator=false
 #INTERFACE=eth0
 interval=5
 
+[cpu_usage]
+command=perl ~/dotfiles/.config/blocklets/cpu_usage_desktop
+interval=10
+LABEL=CPU 
+#min_width=CPU: 100.00%
+#T_WARN=50
+#T_CRIT=80
+#DECIMALS=2
+#COLOR_NORMAL=#EBDBB2
+#COLOR_WARN=#FFFC00
+#COLOR_CRIT=#FF0000
+
 
 ###CPU usage
-[cpu_usage]
-command=~/dotfiles/.config/blocklets/cpu_usage/cpu_usage
-markup=pango
-interval=persist
-min_width=CPU 100.00%
-REFRESH_TIME=2
-LABEL=CPU 
-WARN_PERCENT=50
-CRIT_PERCENT=80
-DECIMALS=2
+# pinebook pro
+#[cpu_usage]
+#command=~/dotfiles/.config/blocklets/cpu_usage/cpu_usage
+#markup=pango
+#interval=persist
+#min_width=CPU 100.00%
+#REFRESH_TIME=2
+#LABEL=CPU 
+#WARN_PERCENT=50
+#CRIT_PERCENT=80
+#DECIMALS=2
+
+
+[temperature]
+command=perl ~/dotfiles/.config/blocklets/temperature
+label= 
+interval=10
+#T_WARN=70
+#T_CRIT=90
+#SENSOR_CHIP=""
 
 # Memory usage
 #

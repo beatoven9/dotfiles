@@ -1,5 +1,4 @@
 
-
 call plug#begin('~/.config/nvim/data')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -126,8 +125,8 @@ set autoindent
 
 " ColorScheme
 "colorscheme gruvbox
-colorscheme iceberg
-"colorscheme nord
+"colorscheme iceberg
+colorscheme nord
 "colorscheme dogrun
 
 "let g:oceanic_material_transparent_background=1
