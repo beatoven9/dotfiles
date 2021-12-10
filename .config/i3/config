@@ -35,9 +35,9 @@ bindsym $mod+o exec --no-startup-id "light -U 10; notify-send 'brightness down'"
 for_window [class=".*"] border pixel 2
 
 #class                  border  backgr. text    indicator   child_border
-client.focused          #3e6e51 #16a39c #000000 #53e68f     #16a39c
+client.focused          #5d7cdc #5d7cdc #000000 #c05ddc     #15318b
 client.focused_inactive #333333 #5f676a #ffffff #117681     #0c455d
-client.unfocused        #333333 #222222 #888888 #292d2e     #0c455d
+client.unfocused        #15318b #222222 #888888 #292d2e     #15318b
 client.urgent           #2f343a #900000 #ffffff #900000     #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000     #0c0c0c
 
@@ -217,14 +217,14 @@ bar {
 
 
         colors {
-            background #262626
+            background #15318b
             statusline #000000
             #separator #262626
             
             #                       border      background  text
-            focused_workspace       #000000     #16a39c     #303030
+            focused_workspace       #000000     #5d7cdc     #303030
             active_workspace        #3e6e51     #303030     #689d6a
-            inactive_workspace      #3e6e51     #303030     #689d6a
+            inactive_workspace      #5d7cdc     #303030     #5d7cdc
             binding_mode            #412474     #8248e9     #ffffff
         }
 }

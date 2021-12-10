@@ -30,7 +30,7 @@ command=$SCRIPT_DIR/$BLOCK_NAME
 separator_block_width=20
 separator=true
 markup=none
-color=#16a39c
+color=#5d7cdc
 
 
 # Network interface monitoring
