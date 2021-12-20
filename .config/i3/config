@@ -32,7 +32,7 @@ bindsym $mod+p exec --no-startup-id "light -A 10; notify-send 'brightness up'"
 bindsym $mod+o exec --no-startup-id "light -U 10; notify-send 'brightness down'"
 
 # disable window title bars and set borders
-for_window [class=".*"] border pixel 2
+for_window [class=".*"] border pixel 1
 
 #class                  border  backgr. text    indicator   child_border
 client.focused          #5d7cdc #5d7cdc #000000 #c05ddc     #15318b
@@ -42,8 +42,8 @@ client.urgent           #2f343a #900000 #ffffff #900000     #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000     #0c0c0c
 
 # set gaps
-gaps inner 5
-gaps outer 2
+gaps inner 0
+gaps outer 0
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
@@ -217,7 +217,7 @@ bar {
 
 
         colors {
-            background #15318b
+            background #1c1c1c     ####15318b
             statusline #000000
             #separator #262626
             

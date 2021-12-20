@@ -3,6 +3,7 @@ call plug#begin('~/.config/nvim/data')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
+Plug 'tc50cal/vim-terminal'
 "Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
 "Plug 'powerline/powerline'
@@ -132,9 +133,9 @@ set expandtab
 set autoindent
 
 " ColorScheme
-"colorscheme gruvbox
+colorscheme gruvbox
 "colorscheme iceberg
-colorscheme nord
+"colorscheme nord
 "colorscheme dogrun
 
 "let g:oceanic_material_transparent_background=1

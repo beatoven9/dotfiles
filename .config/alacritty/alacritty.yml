@@ -148,97 +148,97 @@ font:
 #Colors (Iceberg)
 
 # Isnpired from Iceberg theme.
-colors:
-  primary:
-    background: '0x16171E'
-    foreground: '0xD1D2D3'
-
-  cursor:
-    text: '0xFEFFFF'
-    cursor: '0xc7c7c7'
-
-  # Normal colors
-  normal:
-    black: '0x000000'
-    red: '0xE68E8E'
-    green: '0x83AC8E'
-    yellow: '0xF5B78A'
-    blue: '0x9BB8DC'
-    magenta: '0xBAACE2'
-    cyan: '0x00C5C7'
-    white: '0xC7C7C7'
-
-  # Bright colors
-  bright:
-    black: '0x676767'
-    red: '0xFF6D67'
-    green: '0x5FF967'
-    yellow: '0xFEFB67'
-    blue: '0x6871FF'
-    magenta: '0xFF76FF'
-    cyan: '0x5FFDFF'
-    white: '0xFEFFFF'
-
-#################################################
-# Colors (Gruvbox dark)
 #colors:
 #  primary:
-#    # hard contrast background - '#1d2021'
-#    background:        &gruvbox_dark_bg '#282828'
-#    # soft contrast background - '#32302f'
-#    foreground:        '#fbf1c7'
-#    bright_foreground: '#f9f5d7'
-#    dim_foreground:    '#f2e5bc'
+#    background: '0x16171E'
+#    foreground: '0xD1D2D3'
+#
 #  cursor:
-#    text:   CellBackground
-#    cursor: CellForeground
-#  vi_mode_cursor:
-#    text:   CellBackground
-#    cursor: CellForeground
-#  # search:
-#  #   matches:
-#  #     foreground: '#000000'
-#  #     background: '#ffffff'
-#  #   focused_match:
-#  #    foreground: CellBackground
-#  #    background: CellForeground
-#  #   bar:
-#  #     background: ''
-#  #     foreground: ''
-#  # line_indicator:
-#  #   foreground: None
-#  #   background: None     
-#  selection:
-#    text:       CellBackground
-#    background: CellForeground
-#  bright:
-#    black:   '#928374'
-#    red:     '#fb4934'
-#    green:   '#A8BA85' #'#b8bb26'
-#    yellow:  '#fabd2f'
-#    blue:    '#83a598'
-#    magenta: '#d3869b'
-#    cyan:    '#8ec07c'
-#    white:   '#ebdbb2'
+#    text: '0xFEFFFF'
+#    cursor: '0xc7c7c7'
+#
+#  # Normal colors
 #  normal:
-#    black:   *gruvbox_dark_bg
-#    red:     '#cc241d'
-#    green:   '#8fab68'           #'#87be3b' ###'#98971a'  ###this is a weird color of green
-#    yellow:  '#d79921'
-#    blue:    '#458588'
-#    magenta: '#b16286'
-#    cyan:    '#689d6a'
-#    white:   '#a89984'
-#  dim:
-#    black:   '#32302f'
-#    red:     '#9d0006'
-#    green:   '#94ad90'           ###'#79740e'
-#    yellow:  '#b57614'
-#    blue:    '#076678'
-#    magenta: '#8f3f71'
-#    cyan:    '#427b58'
-#    white:   '#928374'
-#  # indexed_colors: []
+#    black: '0x000000'
+#    red: '0xE68E8E'
+#    green: '0x83AC8E'
+#    yellow: '0xF5B78A'
+#    blue: '0x9BB8DC'
+#    magenta: '0xBAACE2'
+#    cyan: '0x00C5C7'
+#    white: '0xC7C7C7'
+#
+#  # Bright colors
+#  bright:
+#    black: '0x676767'
+#    red: '0xFF6D67'
+#    green: '0x5FF967'
+#    yellow: '0xFEFB67'
+#    blue: '0x6871FF'
+#    magenta: '0xFF76FF'
+#    cyan: '0x5FFDFF'
+#    white: '0xFEFFFF'
+#
+#################################################
+# Colors (Gruvbox dark)
+colors:
+  primary:
+    # hard contrast background - '#1d2021'
+    background:        &gruvbox_dark_bg '#282828'
+    # soft contrast background - '#32302f'
+    foreground:        '#fbf1c7'
+    bright_foreground: '#f9f5d7'
+    dim_foreground:    '#f2e5bc'
+  cursor:
+    text:   CellBackground
+    cursor: CellForeground
+  vi_mode_cursor:
+    text:   CellBackground
+    cursor: CellForeground
+  # search:
+  #   matches:
+  #     foreground: '#000000'
+  #     background: '#ffffff'
+  #   focused_match:
+  #    foreground: CellBackground
+  #    background: CellForeground
+  #   bar:
+  #     background: ''
+  #     foreground: ''
+  # line_indicator:
+  #   foreground: None
+  #   background: None     
+  selection:
+    text:       CellBackground
+    background: CellForeground
+  bright:
+    black:   '#928374'
+    red:     '#fb4934'
+    green:   '#A8BA85' #'#b8bb26'
+    yellow:  '#fabd2f'
+    blue:    '#83a598'
+    magenta: '#d3869b'
+    cyan:    '#8ec07c'
+    white:   '#ebdbb2'
+  normal:
+    black:   *gruvbox_dark_bg
+    red:     '#cc241d'
+    green:   '#8fab68'           #'#87be3b' ###'#98971a'  ###this is a weird color of green
+    yellow:  '#d79921'
+    blue:    '#458588'
+    magenta: '#b16286'
+    cyan:    '#689d6a'
+    white:   '#a89984'
+  dim:
+    black:   '#32302f'
+    red:     '#9d0006'
+    green:   '#94ad90'           ###'#79740e'
+    yellow:  '#b57614'
+    blue:    '#076678'
+    magenta: '#8f3f71'
+    cyan:    '#427b58'
+    white:   '#928374'
+  # indexed_colors: []
 #
 #    ## Colors (Gruvbox light)
 #    #colors:
