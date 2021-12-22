@@ -1,0 +1,24 @@
+#!/bin/bash
+#05012020 geri123@gmx.net Gerhard S.
+#battery-symbols: on Manjaro you need the awesome-terminal-fonts package installed!
+PERCENT=$(cat /sys/class/power_supply/BAT0/capacity)
+STATUS=$(cat /sys/class/power_supply/BAT0/status)
+CHARGING_ICON=""
+
+if [ $STATUS = "Charging" ]
+then
+    CHARGING_ICON="⚡"
+fi
+
+case $((
+ $PERCENT >= 0 && $PERCENT <= 20 ? 1 :
+ $PERCENT > 20 && $PERCENT <= 40 ? 2 :
+ $PERCENT > 40 && $PERCENT <= 60 ? 3 :
+ $PERCENT > 60 && $PERCENT <= 80 ? 4 : 5)) in
+#
+       (1) echo  $CHARGING_ICON "" $PERCENT% ;;
+       (2) echo  $CHARGING_ICON "" $PERCENT% ;;
+       (3) echo  $CHARGING_ICON "" $PERCENT% ;;
+       (4) echo  $CHARGING_ICON "" $PERCENT% ;;
+       (5) echo  $CHARGING_ICON "" $PERCENT% ;;
+esac

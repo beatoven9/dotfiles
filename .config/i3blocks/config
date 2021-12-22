@@ -134,6 +134,12 @@ interval=1
 command=sh $SCRIPT_DIR/battery
 interval=5
 
+# Battery indicator
+#
+[battery-macbook]
+command=sh $SCRIPT_DIR/battery-macbook
+interval=5
+
 # Volume indicator
 #
 # The first parameter sets the step (and units to display)
