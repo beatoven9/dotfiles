@@ -211,22 +211,23 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command SCRIPT_DIR=~/.config/blocklets i3blocks
-#        i3bar_command i3bar -t
-        position top
-
-
-        colors {
-            background #1c1c1c     
-            statusline #000000
-            #separator #262626
-            
-            #                       border      background  text
-            focused_workspace       #000000     #5d7cdc     #303030
-            active_workspace        #3e6e51     #303030     #689d6a
-            inactive_workspace      #5d7cdc     #303030     #5d7cdc
-            binding_mode            #412474     #8248e9     #ffffff
-        }
+    swaybar_command waybar
+#        status_command SCRIPT_DIR=~/.config/blocklets i3blocks
+##        i3bar_command i3bar -t
+#        position top
+#
+#
+#        colors {
+#            background #1c1c1c     
+#            statusline #000000
+#            #separator #262626
+#            
+#            #                       border      background  text
+#            focused_workspace       #000000     #5d7cdc     #303030
+#            active_workspace        #3e6e51     #303030     #689d6a
+#            inactive_workspace      #5d7cdc     #303030     #5d7cdc
+#            binding_mode            #412474     #8248e9     #ffffff
+#        }
 }
 
 #Wallpaper

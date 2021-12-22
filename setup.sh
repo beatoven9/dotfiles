@@ -8,6 +8,14 @@ function makeFolders(){
         mkdir ~/.config/nvim
     fi
 
+    if [ ! -e ~/.config/waybar ]; then
+        mkdir ~/.config/waybar
+    fi
+
+    if [ ! -e ~/scripts ]; then
+        mkdir ~/scripts
+    fi
+
     if [ ! -e ~/.config/nvim/ftplugin ]; then
         mkdir ~/.config/nvim/ftplugin
     fi
@@ -59,6 +67,8 @@ function makeLinks() {
 	    ln -sfn ~/dotfiles/.Xmodmap ~/.Xmodmap 
 	    ln -sfn ~/dotfiles/.config/i3/config ~/.config/i3/config
 	    ln -sfn ~/dotfiles/.config/sway/config ~/.config/sway/config
+	    ln -sfn ~/dotfiles/.config/waybar/config ~/.config/waybar/config
+	    ln -sfn ~/dotfiles/.config/waybar/style.css ~/.config/waybar/style.css
 	    ln -sfn ~/dotfiles/.config/i3blocks/config ~/.config/i3blocks/config
 	    ln -sfn ~/dotfiles/.config/blocklets/memory ~/.config/blocklets/memory
 	    ln -sfn ~/dotfiles/.config/blocklets/disk ~/.config/blocklets/disk
