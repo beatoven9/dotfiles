@@ -1,6 +1,6 @@
 * {
     border: none;
-    border-radius: 5;
+    border-radius: 10;
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
@@ -8,12 +8,20 @@
     margin-top: 1;
     margin-bottom: 1;
     margin-right: 3;
+    margin-left: 3;
+}
+
+window > box {
+  margin: 2px;
+  background: rgba(0, 0, 0, .5);
+  padding: 5px;
+  border-radius: 20;
 }
 
 window#waybar {
-    background-color: #282828;
+    background-color: rgba(40, 40, 40, 0.0);
     border-bottom: 0px solid rgba(100, 114, 125, 0.5);
-    border-radius: 0;
+    border-radius: 10;
     color: #fbf1c7;
     transition-property: background-color;
     transition-duration: .5s;
@@ -43,8 +51,8 @@ window#waybar.chromium {
 
 #workspaces button {
     padding: 0 5px;
-    background-color: #282828;
-    border-radius: 0;
+    background-color: rgba(40, 40, 40, .0);
+    border-radius: 10;
     color: #fbf1c7;
     /* Use box-shadow instead of border so the text isn't offset */
     box-shadow: inset 0 -3px transparent;
@@ -52,8 +60,8 @@ window#waybar.chromium {
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
-    box-shadow: inset 0 -3px #fbf1c7;
+    background: rgba(0, 0, 0, 0.0);
+    box-shadow: inset 0 0 rgba(0, 0, 0, 0);
 }
 
 #workspaces button.focused {
@@ -106,7 +114,7 @@ window#waybar.chromium {
 }
 
 #clock {
-    background-color: #282828;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 #battery {

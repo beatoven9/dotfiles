@@ -24,7 +24,7 @@ bindsym $mod+o exec --no-startup-id "light -U 10; notify-send 'brightness down'"
 for_window [class=".*"] border pixel 1
 
 #class                  border  backgr. text    indicator   child_border
-client.focused          #5d7cdc #5d7cdc #000000 #c05ddc     #15318b
+client.focused          #b16282 #b16282 #000000 #c05ddc     #15318b
 client.focused_inactive #333333 #5f676a #ffffff #117681     #0c455d
 client.unfocused        #15318b #222222 #888888 #292d2e     #15318b
 client.urgent           #2f343a #900000 #ffffff #900000     #900000
@@ -83,10 +83,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+v split h
+bindsym $mod+b split h
 
 # split in vertical orientation
-bindsym $mod+b split v
+bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
