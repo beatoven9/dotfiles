@@ -18,6 +18,8 @@ Plug 'glepnir/oceanic-material'
 Plug 'wadackel/vim-dogrun'
 Plug 'https://github.com/cocopon/iceberg.vim.git'
 Plug 'arcticicestudio/nord-vim'
+Plug 'jaredgorski/fogbell.vim'
+Plug 'whatyouhide/vim-gotham'
 
 
 "Plug 'SirVer/ultisnips'
@@ -133,10 +135,12 @@ set expandtab
 set autoindent
 
 " ColorScheme
-colorscheme gruvbox
-"colorscheme iceberg
+"colorscheme gruvbox
+colorscheme iceberg
 "colorscheme nord
 "colorscheme dogrun
+"colorscheme fogbell
+"colorscheme gotham
 
 "let g:oceanic_material_transparent_background=1
 "colorscheme oceanic_material

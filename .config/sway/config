@@ -187,6 +187,8 @@ bindsym $mod+r mode "resize"
 #bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 #bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 
+for_window [app_id="Alacritty"] border pixel 1,
+for_window [app_id="org.qutebrowser.qutebrowser"] border pixel 1,
 
 #Use Waybar as status bar
 bar {
@@ -200,6 +202,7 @@ input type:touchpad {
     tap enabled
     natural_scroll enabled
     middle_emulation enabled
+    dwt disabled
     #pointer_accel 0.4
     tap_button_map lrm
 }
