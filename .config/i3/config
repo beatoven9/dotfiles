@@ -10,6 +10,8 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod1
+set $blue #15318b
+set $magenta #c05ddc
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -32,18 +34,18 @@ bindsym $mod+p exec --no-startup-id "light -A 10; notify-send 'brightness up'"
 bindsym $mod+o exec --no-startup-id "light -U 10; notify-send 'brightness down'"
 
 # disable window title bars and set borders
-for_window [class=".*"] border pixel 1
+for_window [class=".*"] border pixel 2
 
 #class                  border  backgr. text    indicator   child_border
-client.focused          #5d7cdc #5d7cdc #000000 #c05ddc     #15318b
-client.focused_inactive #333333 #5f676a #ffffff #117681     #0c455d
+client.focused          #5d7cdc #5d7cdc #000000 $magenta    $magenta
+client.focused_inactive #333333 #5f676a #ffffff #117681     $blue
 client.unfocused        #15318b #222222 #888888 #292d2e     #15318b
 client.urgent           #2f343a #900000 #ffffff #900000     #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000     #0c0c0c
 
 # set gaps
-gaps inner 0
-gaps outer 0
+gaps inner 10
+gaps outer 10
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.

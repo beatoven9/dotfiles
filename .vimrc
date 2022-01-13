@@ -13,6 +13,7 @@ Plug 'tc50cal/vim-terminal'
 "Plug 'romgrk/barbar.nvim'
 
 Plug 'habamax/vim-godot'
+Plug 'jvirtanen/vim-octave'
 Plug 'morhetz/gruvbox'
 Plug 'glepnir/oceanic-material'
 Plug 'wadackel/vim-dogrun'
