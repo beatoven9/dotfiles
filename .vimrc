@@ -14,6 +14,7 @@ Plug 'tc50cal/vim-terminal'
 
 Plug 'habamax/vim-godot'
 Plug 'jvirtanen/vim-octave'
+
 Plug 'morhetz/gruvbox'
 Plug 'glepnir/oceanic-material'
 Plug 'wadackel/vim-dogrun'
