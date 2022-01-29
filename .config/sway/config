@@ -8,6 +8,16 @@ font pango:monospace 10
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
 
+#Tomorrow Night Colors
+set $black #1d1f21
+set $red #cc6666
+set $green #b5bd68
+set $yellow #f0c674
+set $blue #81a2be
+set $magenta #b294bb
+set $cyan #8abeb7
+set $white #c5c8c6
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 #
@@ -23,16 +33,23 @@ bindsym $mod+o exec --no-startup-id "light -U 10; notify-send 'brightness down'"
 # disable window title bars and set borders
 for_window [class=".*"] border pixel 1
 
-#class                  border  backgr. text    indicator   child_border
-client.focused          #b16282 #b16282 #000000 #c05ddc     #15318b
-client.focused_inactive #333333 #5f676a #ffffff #117681     #0c455d
-client.unfocused        #15318b #222222 #888888 #292d2e     #15318b
-client.urgent           #2f343a #900000 #ffffff #900000     #900000
-client.placeholder      #000000 #0c0c0c #ffffff #000000     #0c0c0c
+##class                  border  backgr. text    indicator   child_border
+#client.focused          #b16282 #b16282 #000000 #c05ddc     #15318b
+#client.focused_inactive #333333 #5f676a #ffffff #117681     #0c455d
+#client.unfocused        #15318b #222222 #888888 #292d2e     #15318b
+#client.urgent           #2f343a #900000 #ffffff #900000     #900000
+#client.placeholder      #000000 #0c0c0c #ffffff #000000     #0c0c0c
 
+
+#class                  border      backgr. text    indicator   child_border
+client.focused          $magenta    #5d7cdc #000000 $magenta    $magenta
+client.focused_inactive $black      #5f676a #ffffff $black      $black
+client.unfocused        $black      #222222 #888888 $black      $black
+client.urgent           #2f343a     #900000 #ffffff #900000     #900000
+client.placeholder      #000000     #0c0c0c #ffffff #000000     #0c0c0c
 # set gaps
-gaps inner 2
-gaps outer 2
+gaps inner 0
+gaps outer 0
 
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
