@@ -28,6 +28,9 @@ function makeFolders(){
         mkdir ~/.config/alacritty
     fi
     
+    if [ ! -e ~/.config/rofi ]; then
+        mkdir ~/.config/rofi
+    fi
 
     if [ $this_user=="laon-pc" ] || [$this_user=="laon-pbp"] || [$this_user=="laon-laptop"]; then
 
@@ -56,6 +59,7 @@ function makeLinks() {
     ln -sf ~/dotfiles/.config/nvim/ftplugin/* ~/.config/nvim/ftplugin/
         
     ln -sfn ~/dotfiles/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+    ln -sfn ~/dotfiles/.config/rofi/config.rasi ~/.config/rofi/config.rasi
 
     ln -sfn ~/dotfiles/my_theme.zsh-theme ~/.oh-my-zsh/custom/themes/my_theme.zsh-theme
 
