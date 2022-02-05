@@ -8,6 +8,10 @@ function makeFolders(){
         mkdir ~/.config/nvim
     fi
 
+    if [ ! -e ~/.config/nvim/lua ]; then
+        mkdir ~/.config/nvim/lua
+    fi
+
     if [ ! -e ~/.config/waybar ]; then
         mkdir ~/.config/waybar
     fi
@@ -55,6 +59,7 @@ function makeLinks() {
     ln -sfn ~/dotfiles/.zsh_aliases ~/.zsh_aliases
 
     ln -sfn ~/dotfiles/.config/nvim/init.vim ~/.config/nvim/init.vim
+    ln -sfn ~/dotfiles/.config/nvim/lua/init.lua ~/.config/nvim/lua/init.lua
     ln -sfn ~/dotfiles/.config/nvim/coc-settings.json ~/.config/nvim/coc-settings.json
     ln -sf ~/dotfiles/.config/nvim/ftplugin/* ~/.config/nvim/ftplugin/
         
