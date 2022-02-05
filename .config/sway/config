@@ -1,5 +1,8 @@
 set $mod Mod4
 
+set $term alacritty
+
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:monospace 10
@@ -31,7 +34,8 @@ bindsym $mod+p exec --no-startup-id "light -A 10; notify-send 'brightness up'"
 bindsym $mod+o exec --no-startup-id "light -U 10; notify-send 'brightness down'"
 
 # disable window title bars and set borders
-for_window [class=".*"] border pixel 1
+#for_window [class=".*"] border pixel 3
+default_border pixel 3
 
 ##class                  border  backgr. text    indicator   child_border
 #client.focused          #b16282 #b16282 #000000 #c05ddc     #15318b
@@ -67,7 +71,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec $term
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -204,8 +208,8 @@ bindsym $mod+r mode "resize"
 #bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 #bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 
-for_window [app_id="Alacritty"] border pixel 1,
-for_window [app_id="org.qutebrowser.qutebrowser"] border pixel 1,
+#for_window [app_id="Alacritty"] border pixel 3,
+#for_window [app_id="org.qutebrowser.qutebrowser"] border pixel 1,
 
 #Use Waybar as status bar
 bar {

@@ -13,7 +13,9 @@ Plug 'tc50cal/vim-terminal'
 "Plug 'romgrk/barbar.nvim'
 
 Plug 'habamax/vim-godot'
+Plug 'calviken/vim-gdscript3'
 Plug 'jvirtanen/vim-octave'
+Plug 'neoclide/coc-python'
 
 Plug 'morhetz/gruvbox'
 Plug 'glepnir/oceanic-material'
@@ -37,8 +39,32 @@ Plug 'prettier/vim-prettier', {
 
 call plug#end()
 
-let g:coc_global_extensions = ['coc-python', 'coc-jedi', 'coc-clangd', 'coc-pairs', 'coc-rust-analyzer', 'coc-html', 'coc-htmlhint', 'coc-html-css-support', 'coc-sh', 'coc-json', 'coc-tsserver', 'coc-flutter']
+let g:coc_global_extensions = ['coc-python', 'coc-clangd', 'coc-pairs', 'coc-rust-analyzer', 'coc-html', 'coc-htmlhint', 'coc-html-css-support', 'coc-sh', 'coc-json', 'coc-tsserver', 'coc-flutter']
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""Godot Setup
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"if !has_key( g:, 'ycm_language_server' )
+"  let g:ycm_language_server = []
+"endif
+"
+"let g:ycm_language_server += [
+"  \   {
+"  \     'name': 'godot',
+"  \     'filetypes': [ 'gdscript' ],
+"  \     'project_root_files': [ 'project.godot' ],
+"  \     'port': 6008
+"  \   }
+"  \ ]
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
