@@ -15,29 +15,36 @@ set.linebreak = true
 set.number = true
 set.relativenumber = true
 
+-------------------------------------------------------------------
+-------------------vim-plug----------------------------------------
+-------------------------------------------------------------------
+
 local Plug = vim.fn['plug#']
 vim.call('plug#begin', '~/.config/nvim/plugged')
+
+Plug 'nvim-treesitter/nvim-treesitter'
 
 Plug 'https://github.com/cocopon/iceberg.vim.git'
 Plug 'navarasu/onedark.nvim'
 
 --Language specific lsp Plugins
 Plug 'habamax/vim-godot'
-Plug 'calviken/vim-gdscript3'
+--Plug 'calviken/vim-gdscript3'
 Plug 'jvirtanen/vim-octave'
 
 Plug 'preservim/nerdtree'
 --Plug 'kyazdani42/nvim-tree.lua'
 
 
---Plug 'SirVer/ultisnips'
---Plug 'honza/vim-snippets'
-
 --JSX tags
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'alvan/vim-closetag'
+Plug 'windwp/nvim-ts-autotag'
+--Plug 'alvan/vim-closetag'
 
+--Formatting
+Plug 'jiangmiao/auto-pairs'
 
+--LSP/autocomplete config
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
@@ -56,13 +63,20 @@ Plug 'hrsh7th/vim-vsnip'
 
 vim.call('plug#end')
 
+require'nvim-treesitter.configs'.setup {
+  autotag = {
+    enable = true,
+  }
+}
+
+
+
 require'lspconfig'.bashls.setup{}
 require'lspconfig'.pyright.setup{} -- yay -S pyright-git
 require'lspconfig'.clangd.setup{} -- must have clangd installed
-require'lspconfig'.tsserver.setup{} -- npm install -g typescript typescript-language-server (pacman typescript, yay -S javascript-typescript-langserver
+require'lspconfig'.tsserver.setup{} -- pacman typescript, yay -S typescript-langserver
 require'lspconfig'.rust_analyzer.setup{} -- pacman -S rust-analyzer
 require'lspconfig'.gdscript.setup{capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())}
-
 
 ------------------------------------------------------------------------------------
 ----------------------------- onedark theme ----------------------------------------
