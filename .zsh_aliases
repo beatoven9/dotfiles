@@ -14,4 +14,4 @@ alias nvim_config="nvim ~/.config/nvim/init.vim"
 
 alias kr="xdg-open ~/Development/Programming_Resources/PDFs/C_Programming_KR.pdf"
 
-alias tilesetter="~/.local/share/Steam/steamapps/common/Tilesetter"
+alias tilesetter="~/.local/share/Steam/steamapps/common/Tilesetter/Tilesetter"
