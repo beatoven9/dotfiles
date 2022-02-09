@@ -39,7 +39,6 @@ Plug 'preservim/nerdtree'
 --JSX tags
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'windwp/nvim-ts-autotag'
---Plug 'alvan/vim-closetag'
 
 --Formatting
 Plug 'jiangmiao/auto-pairs'
@@ -63,11 +62,6 @@ Plug 'hrsh7th/vim-vsnip'
 
 vim.call('plug#end')
 
-require'nvim-treesitter.configs'.setup {
-  autotag = {
-    enable = true,
-  }
-}
 
 
 
@@ -78,6 +72,11 @@ require'lspconfig'.tsserver.setup{} -- pacman typescript, yay -S typescript-lang
 require'lspconfig'.rust_analyzer.setup{} -- pacman -S rust-analyzer
 require'lspconfig'.gdscript.setup{capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())}
 
+require'nvim-treesitter.configs'.setup {
+  autotag = {
+    enable = true,
+  }
+}
 ------------------------------------------------------------------------------------
 ----------------------------- onedark theme ----------------------------------------
 ------------------------------------------------------------------------------------
