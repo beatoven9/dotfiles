@@ -31,6 +31,10 @@ function makeFolders(){
     if [ ! -e ~/.config/alacritty ]; then
         mkdir ~/.config/alacritty
     fi
+
+    if [ ! -e ~/.config/kitty ]; then
+        mkdir ~/.config/kitty
+    fi
     
     if [ ! -e ~/.config/rofi ]; then
         mkdir ~/.config/rofi
@@ -64,6 +68,8 @@ function makeLinks() {
     ln -sf ~/dotfiles/.config/nvim/ftplugin/* ~/.config/nvim/ftplugin/
         
     ln -sfn ~/dotfiles/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+    ln -sfn ~/dotfiles/.config/kitty/kitty.conf ~/.config/kitty/kitty.conf
+    ln -sfn ~/dotfiles/.config/kitty/theme.conf ~/.config/kitty/theme.conf
     ln -sfn ~/dotfiles/.config/rofi/config.rasi ~/.config/rofi/config.rasi
 
     ln -sfn ~/dotfiles/my_theme.zsh-theme ~/.oh-my-zsh/custom/themes/my_theme.zsh-theme
