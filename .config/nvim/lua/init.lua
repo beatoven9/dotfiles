@@ -54,6 +54,7 @@ Plug 'hrsh7th/nvim-cmp'
 --snippets
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
+--Plug 'L3MON4D3/LuaSnip'
 
 --Plug 'prettier/vim-prettier', {
 --  \ 'do': 'yarn install --frozen-lockfile --production',
@@ -119,6 +120,15 @@ local cmp = require('cmp')
 local menu = {buffer = '[Buf]', nvim_lsp = '[LSP]', omni = '[Omni]', path = '[Path]'}
 local widths = {abbr = 80, kind = 40, menu = 40}
 cmp.setup {
+  snippet = {
+    -- REQUIRED - you must specify a snippet engine
+    expand = function(args)
+      vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+      -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+      -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
+      -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
+    end,
+  },
   completion = {keyword_length = 2},
   formatting = {
     format = function(entry, vim_item)
@@ -138,6 +148,7 @@ cmp.setup {
   preselect = require('cmp.types').cmp.PreselectMode.None,
   sources = cmp.config.sources({
     {name = 'nvim_lsp'},
+    {name = 'luasnip'},
     {name = 'omni'},
     {name = 'path'},
     {name = 'buffer'},
