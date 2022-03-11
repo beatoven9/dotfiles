@@ -2,16 +2,12 @@ alias ff="firefox"
 
 #alias dolphin="dolphin-emu"
 
-alias new_password="~/bin/Password_GUI/main.py"
-
 alias open="xdg-open"
-
-alias ex="chmod +x"
-
-alias sonnet_dir="~/Development/py_programs/sonnet_program/"
 
 alias nvim_config="nvim ~/.config/nvim/init.vim"
 
 alias kr="xdg-open ~/Development/Programming_Resources/PDFs/C_Programming_KR.pdf"
 
 alias tilesetter="~/.local/share/Steam/steamapps/common/Tilesetter/Tilesetter"
+
+alias ml_python="source ~/PythonVenvs/ml_python/bin/activate"
