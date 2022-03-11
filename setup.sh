@@ -8,7 +8,7 @@ function linkDotToConfigDir() {
 }
 
 function linkDotToHomeDir() {
-    ln -sfn ~/dotfiles/$1/ ~/
+    ln -sfn ~/dotfiles/$1 ~/
 }
 
 function makeLinks() {
