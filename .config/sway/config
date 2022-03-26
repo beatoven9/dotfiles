@@ -176,7 +176,41 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+#    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+
+
+set {
+    $nag            exec swaynagmode
+    $nag_exit       $nag --exit
+    $nag_confirm    $nag --confirm
+    $nag_select     $nag --select
+}
+
+mode "nag" {
+  bindsym {
+    Ctrl+d    mode "default"
+
+    Ctrl+c    $nag_exit
+    q         $nag_exit
+    Escape    $nag_exit
+
+    Return    $nag_confirm
+
+    Tab       $nag_select next
+    Shift+Tab $nag_select prev
+
+    Left      $nag_select prev
+    Right     $nag_select next
+
+    Up        $nag_select next
+    Down      $nag_select prev
+  }
+}
+
+bindsym {
+    $mod+Shift+e $nag -t "warning" -m "Exit Sway?" -b "Exit" "swaymsg exit" -b "Reload" "swaymsg reload"
+}
+
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
