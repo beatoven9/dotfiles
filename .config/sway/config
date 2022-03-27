@@ -2,7 +2,6 @@ set $mod Mod1
 
 set $term alacritty
 
-
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:monospace 10
@@ -244,9 +243,6 @@ bindsym XF86MonBrightnessUp exec brightnessctl s +10%
 bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 
 
-#for_window [app_id="Alacritty"] border pixel 3,
-#for_window [app_id="org.qutebrowser.qutebrowser"] border pixel 1,
-
 #Use Waybar as status bar
 bar {
     swaybar_command waybar
@@ -256,9 +252,11 @@ bar {
 output DP-1 pos 0 0
 output eDP-1 pos  2560 0
 
+#Map touchscreen to correct display
+input 1118:31:IPTS_Touch map_to_output eDP-1
+
 #Wallpaper
 output "*" bg ~/Pictures/CurrentWallpaper/* fill
-
 
 input type:touchpad {
     tap enabled
@@ -269,16 +267,13 @@ input type:touchpad {
     tap_button_map lrm
 }
 
-input 1118:31:IPTS_Touch map_to_output eDP-1
+#Caps lock is additional escape
+input "type:keyboard" {
+    xkb_options caps:escape
+}
 
-#input 9610:30:HAILUCK_CO.,LTD_USB_KEYBOARD {
-#    xkb_options caps:escape
-#}
-
+#Caps lock is additional escape for Mac
 input 1452:594:Apple_Inc._Apple_Internal_Keyboard_/_Trackpad {
     xkb_options caps:escape
 }
 
-input "type:keyboard" {
-    xkb_options caps:escape
-}
