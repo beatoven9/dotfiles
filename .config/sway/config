@@ -239,8 +239,10 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-#bindsym XF86MonBrightnessDown exec xbacklight -dec 10
-#bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+#Brightness
+bindsym XF86MonBrightnessUp exec brightnessctl s +100
+bindsym XF86MonBrightnessDown exec brightnessctl s 100-
+
 
 #for_window [app_id="Alacritty"] border pixel 3,
 #for_window [app_id="org.qutebrowser.qutebrowser"] border pixel 1,
@@ -250,8 +252,13 @@ bar {
     swaybar_command waybar
 }
 
+#Displays
+output DP-1 pos 0 0
+output eDP-1 pos  2560 0
+
 #Wallpaper
 output "*" bg ~/Pictures/CurrentWallpaper/* fill
+
 
 input type:touchpad {
     tap enabled
