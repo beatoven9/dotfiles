@@ -239,7 +239,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-#Brightness
+#Brightness (Must install brightnessctl and add user to video group)
 bindsym XF86MonBrightnessUp exec brightnessctl s +100
 bindsym XF86MonBrightnessDown exec brightnessctl s 100-
 
