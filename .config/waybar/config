@@ -6,7 +6,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "custom/media", "sway/window"],
     "modules-center": [],
-    "modules-right": [ "pulseaudio", "network", "disk", "cpu", "memory", "temperature", "battery", "battery#bat2", "tray", "clock"],
+    "modules-right": [ "pulseaudio", "network", "disk", "cpu", "memory", "temperature", "backlight", "battery", "battery#bat2", "tray", "clock"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -97,7 +97,7 @@
         "format-icons": ["", "", ""]
     },
     "backlight": {
-        // "device": "acpi_video1",
+        "device": "acpi_video1",
         "format": "{percent}% {icon}",
         "format-icons": ["", ""]
     },
