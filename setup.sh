@@ -19,7 +19,7 @@ function makeLinks() {
     linkDotToHomeDir ".tmux.conf"
     linkDotToHomeDir ".zsh_aliases"
 
-    if [ "$this_user" = "laon-macbook"  ] || [ "$this_user" = "laon-surface"  ] || [ "$this_user" = "laon-pc" ] || [ "$this_user" = "laon-pbp" ] || [ "$this_user" = "laon-laptop" ]; then
+    if [ "$this_user" = "laon-macbook"  ] || [ "$this_user" = "laon-surface"  ] || [ "$this_user" = "laon-pc" ] || [ "$this_user" = "laonpbp" ] || [ "$this_user" = "laon-laptop" ]; then
         
         linkDotToConfigDir "i3"
         linkDotToConfigDir "i3blocks"
@@ -60,7 +60,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     makeLinks
     linkOhMyZshTheme
 
-    if [ "$this_user" = "laon-macbook"  ] || [ "$this_user" = "laon-surface"  ] || [ "$this_user" = "laon-pc" ] || [ "$this_user" = "laon-pbp" ] || [ "$this_user" = "laon-laptop" ]; then
+    if [ "$this_user" = "laon-macbook"  ] || [ "$this_user" = "laon-surface"  ] || [ "$this_user" = "laon-pc" ] || [ "$this_user" = "laonpbp" ] || [ "$this_user" = "laon-laptop" ]; then
 	    xmodmap ~/.Xmodmap;
     fi
 fi;
