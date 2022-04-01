@@ -27,6 +27,7 @@ function makeLinks() {
         linkDotToConfigDir "sway"
         linkDotToConfigDir "waybar"
         linkDotToConfigDir "rofi"
+        linkDotToConfigDir "wofi"
         linkDotToConfigDir "alacritty"
 
         linkDotToHomeDir "scripts"
