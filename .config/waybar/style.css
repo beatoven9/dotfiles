@@ -1,44 +1,44 @@
+
+#backlight, #battery, #cpu, #disk, #idle_inhibitor, #keyboard-state,
+#pulseaudio,  #tags, #language, #memory, #network, #sndio,
+#mode, #window,  #temperature, #taskbar, #workspaces, #workspaces button.focused,
+#custom-treefetch-downloads, #custom-update-count, #custom-axyl-downloads {
+  box-shadow: 3px 3px 0 #303030;
+  margin-bottom: 3px;
+  margin-right: 3px;
+  margin-left: 2px;
+  margin-right: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: #464646;
+  border-radius: 0px;
+}
+
+
+
 * {
     border: none;
-    border-radius: 10;
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
     min-height: 0;
-    margin-top: 1;
-    margin-bottom: 1;
-    margin-right: 3;
-    margin-left: 3;
 }
 
 window > box {
-  margin: 2px;
   background: rgba(0, 0, 0, .5);
   padding: 5px;
-  border-radius: 20;
 }
 
 window#waybar {
-    background-color: rgba(40, 40, 40, 0.0);
+    background-color: #cc6666;
     border-bottom: 0px solid rgba(100, 114, 125, 0.5);
-    border-radius: 10;
     color: #fbf1c7;
-    transition-property: background-color;
-    transition-duration: .5s;
 }
 
 window#waybar.hidden {
-    opacity: 0.2;
+    opacity: 0.1;
+    background: transparent;
 }
-
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-*/
 
 window#waybar.termite {
     background-color: #3F3F3F;
@@ -49,13 +49,10 @@ window#waybar.chromium {
     border: none;
 }
 
+
 #workspaces button {
     padding: 3px 3px;
-    background-color: rgba(40, 40, 40, .0);
-    border-radius: 9;
     color: #fbf1c7;
-    /* Use box-shadow instead of border so the text isn't offset */
-    /*box-shadow: inset 0 -3px transparent;*/
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
@@ -65,8 +62,8 @@ window#waybar.chromium {
 }
 
 #workspaces button.focused {
-    color: #fbf1c7;
-    background-color: #458588;
+    color: #1d1f21;
+    background-color: #b294bb;
     /*box-shadow: inset 0 -2px #b16286;*/
 }
 
@@ -100,7 +97,9 @@ window#waybar.chromium {
 
 #window,
 #workspaces {
+    background: transparent;
     margin: 0 4px;
+    box-shadow: 0 0 #000000;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -118,12 +117,12 @@ window#waybar.chromium {
 }
 
 #battery {
-    background-color: #a89984;
-    color: #000000;
+    background-color: #4d5057;
+    color: #c5c8c6;
 }
 
 #battery.charging, #battery.plugged {
-    color: #fbf1c7;
+    color: #c5c8c6;
     background-color: #26A65B;
 }
 
@@ -149,28 +148,32 @@ label:focus {
 }
 
 #cpu {
-    background-color: #689d6a;
+    background-color: #b5bd68;
     color: #000000;
 }
 
 #memory {
-    background-color: #b16286;
+    background-color: #8abeb7;
+    color: #1d1f21;
 }
 
 #disk {
-    background-color: #964B00;
+    background-color: #b294bb;
+    color: #1d1f21;
 }
 
 #backlight {
-    background-color: #90b1b1;
+    background-color: #81a2be;
+    color: #1d1f21;
 }
 
 #network {
-    background-color: #458588;
+    background-color: #de935f;
+    color: #1d1f21;
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
+    background-color: #4d5057;
 }
 
 #pulseaudio {
