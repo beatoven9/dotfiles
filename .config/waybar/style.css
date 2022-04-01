@@ -1,7 +1,7 @@
 
 #backlight, #battery, #cpu, #disk, #idle_inhibitor, #keyboard-state,
 #pulseaudio,  #tags, #language, #memory, #network, #sndio,
-#mode, #window,  #temperature, #taskbar, #workspaces, #workspaces button.focused,
+#mode,  #temperature, #taskbar, #workspaces, #workspaces button.focused,
 #custom-treefetch-downloads, #custom-update-count, #custom-axyl-downloads {
   box-shadow: 3px 3px 0 #303030;
   margin-bottom: 3px;
@@ -25,30 +25,15 @@
 }
 
 window > box {
-  background: rgba(0, 0, 0, .5);
+  background: rgba(0, 0, 0, .4);
   padding: 5px;
 }
 
 window#waybar {
     background-color: #cc6666;
-    border-bottom: 0px solid rgba(100, 114, 125, 0.5);
-    color: #fbf1c7;
+    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+    color: transparent;
 }
-
-window#waybar.hidden {
-    opacity: 0.1;
-    background: transparent;
-}
-
-window#waybar.termite {
-    background-color: #3F3F3F;
-}
-
-window#waybar.chromium {
-    background-color: #000000;
-    border: none;
-}
-
 
 #workspaces button {
     padding: 3px 3px;
@@ -95,7 +80,6 @@ window#waybar.chromium {
     color: #fbf1c7;
 }
 
-#window,
 #workspaces {
     background: transparent;
     margin: 0 4px;
