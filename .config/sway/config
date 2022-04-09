@@ -1,6 +1,6 @@
 set $mod Mod1
 
-set $term alacritty
+set $term kitty
 set $lock swaylock -i ~/Pictures/CurrentWallpaper/*
 set $lockSuspend exec bash ~/.config/sway/lockSuspend.sh
 
