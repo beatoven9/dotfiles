@@ -5,8 +5,9 @@
     // "width": 1280, // Waybar width
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "custom/media", "sway/window"],
-    "modules-center": [],
-    "modules-right": [ "pulseaudio", "network", "disk", "cpu", "memory", "temperature", "backlight", "battery", "battery#bat2", "tray", "clock"],
+    "modules-center": ["clock#eastern"],
+    "modules-right": [ "pulseaudio", "network",  "backlight", "battery", "tray"],
+    //"modules-right": [ "pulseaudio", "network", "temperature", "cpu","memory", "disk", "backlight", "battery", "tray"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -76,9 +77,10 @@
         // "icon-size": 21,
         "spacing": 10
     },
-    "clock": {
-        // "timezone": "America/New_York",
+    "clock#eastern": {
+        "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%I:%M%p %Z}",
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
