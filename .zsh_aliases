@@ -1,13 +1,5 @@
 alias ff="firefox"
 
-#alias dolphin="dolphin-emu"
-
 alias open="xdg-open"
 
-alias nvim_config="nvim ~/.config/nvim/init.vim"
-
-alias kr="xdg-open ~/Development/Programming_Resources/PDFs/C_Programming_KR.pdf"
-
-alias tilesetter="~/.local/share/Steam/steamapps/common/Tilesetter/Tilesetter"
-
-alias ml_python="source ~/PythonVenvs/ml_python/bin/activate"
+alias pydev="source ~/PyVenvs/devPy/bin/activate"

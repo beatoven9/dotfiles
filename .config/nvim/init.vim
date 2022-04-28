@@ -27,6 +27,56 @@ nnoremap <C-p> :bd<CR>
 set completeopt=menu,menuone,noselect
 
 
+"-------------------------------------------------------------------
+"-------------------vim-plug----------------------------------------
+"-------------------------------------------------------------------
+
+"""call plug#begin('~/.config/nvim/data')
+
+"""Plug 'nvim-treesitter/nvim-treesitter'
+"""
+"""Plug 'https://github.com/cocopon/iceberg.vim.git'
+"""Plug 'navarasu/onedark.nvim'
+"""
+""""""Language specific lsp Plugins
+"""Plug 'habamax/vim-godot'
+""""""Plug 'calviken/vim-gdscript3'
+"""Plug 'jvirtanen/vim-octave'
+"""
+"""Plug 'preservim/nerdtree'
+""""""Plug 'kyazdani42/nvim-tree.lua'
+"""
+"""
+""""""JSX tags
+"""Plug 'maxmellon/vim-jsx-pretty'
+"""Plug 'windwp/nvim-ts-autotag'
+"""
+""""""Formatting
+"""Plug 'jiangmiao/auto-pairs'
+"""Plug 'averms/black-nvim'
+"""
+"""Plug 'nvie/vim-flake8' """pip install flake8 F7  to run                                                                                                                                                                                                                         
+""Plug 'fisadev/vim-isort'
+
+""""LSP/autocomplete config
+"Plug 'neovim/nvim-lspconfig'
+"Plug 'hrsh7th/cmp-nvim-lsp'
+"Plug 'hrsh7th/cmp-buffer'
+"Plug 'hrsh7th/cmp-path'
+"Plug 'hrsh7th/cmp-cmdline'
+"Plug 'hrsh7th/nvim-cmp'
+"
+""""snippets
+"Plug 'hrsh7th/cmp-vsnip'
+"Plug 'hrsh7th/vim-vsnip'
+""""Plug 'L3MON4D3/LuaSnip'
+"
+"""Plug 'prettier/vim-prettier', {
+"""  \ 'do': 'yarn install --frozen-lockfile --production',
+"""  \ 'branch': 'release/0.x'
+"""  \ }
+
+"""call plug#end()
 
 "lua << EOF
 "require'lspconfig'.gdscript.setup{capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())}

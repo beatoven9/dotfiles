@@ -42,6 +42,10 @@ Plug 'windwp/nvim-ts-autotag'
 
 --Formatting
 Plug 'jiangmiao/auto-pairs'
+Plug 'averms/black-nvim'
+
+Plug 'nvie/vim-flake8' --pip install flake8 F7  to run                                                                                                                                                                                                                         
+--Plug 'fisadev/vim-isort'
 
 --LSP/autocomplete config
 Plug 'neovim/nvim-lspconfig'
@@ -154,3 +158,8 @@ cmp.setup {
     {name = 'buffer'},
   }),
 }
+
+--vim.cmd [[
+--    syntax enable
+--    colorscheme onedark
+--]]
