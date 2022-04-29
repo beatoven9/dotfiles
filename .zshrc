@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/cythna/.oh-my-zsh"
+export ZSH="/home/laon/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -123,3 +123,24 @@ PATH=~/bin:$PATH
 export PATH=$PATH:/home/laon/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin
 
 source $HOME/.zsh_aliases
+
+if [ -e /home/laon/.nix-profile/etc/profile.d/nix.sh ]; then . /home/laon/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+#export TERM="screen-256color"
+export TERM=xterm-256color
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/laon/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/laon/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/laon/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/laon/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
