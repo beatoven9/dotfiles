@@ -3,3 +3,6 @@ alias ff="firefox"
 alias open="xdg-open"
 
 alias pydev="source ~/PyVenvs/devPy/bin/activate"
+
+alias vim="nvim"
+alias vi="nvim"
